@@ -176,7 +176,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 28px 36px;
+  padding: 24px 36px;
   overflow-y: auto;
   min-width: 0;
 }
@@ -186,17 +186,18 @@ body {
   max-width: 1120px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 /* 像素风格拖拽上传区 */
 .pixel-dropzone {
   background-color: #ffffff;
   border: 4px dashed var(--pixel-dark);
-  padding: 36px 20px;
+  padding: 24px 20px;
   text-align: center;
   cursor: pointer;
   transition: all 0.1s ease;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   box-shadow: 4px 4px 0 var(--pixel-dark);
   position: relative;
 }
@@ -246,6 +247,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: stretch;
+  flex: 1;
 }
 
 .pixel-card {
@@ -257,7 +259,9 @@ body {
 }
 
 .pixel-grid-cols .pixel-card {
-  height: 520px;
+  min-height: 640px;
+  height: calc(100vh - 240px);
+  max-height: 880px;
 }
 
 /* 独立自适应卡片（设备连线、共享剪贴板） */
